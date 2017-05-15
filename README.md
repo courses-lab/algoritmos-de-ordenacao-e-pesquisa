@@ -5,7 +5,7 @@
 
 **Métodos de pesquisa**
 - [Pesquisa sequencial](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/pesquisa-sequencial.md)
-- Pesquisa binária
+- [Pesquisa binária](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/pesquisa-binaria.md)
 
 **Métodos de ordenação**
 - Bubble sort
