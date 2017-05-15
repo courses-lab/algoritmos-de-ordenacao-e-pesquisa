@@ -4,7 +4,7 @@
 - [Como criar e preencher e ler um vetor](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/criacao-de-vetores.md)
 
 **Métodos de pesquisa**
-- Pesquisa sequencial
+- [Pesquisa sequencial](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/pesquisa-sequencial.md)
 - Pesquisa binária
 
 **Métodos de ordenação**
