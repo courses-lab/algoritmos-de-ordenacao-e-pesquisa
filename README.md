@@ -10,6 +10,6 @@
 **Métodos de ordenação**
 - Bubble sort
 - Selection sort
-- Insertion sort
+- [Insertion sort](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/insertion-sort.md)
 - Merge sort
 - Quick sort
