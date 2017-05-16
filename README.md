@@ -8,7 +8,7 @@
 - [Pesquisa binária](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/pesquisa-binaria.md)
 
 **Métodos de ordenação**
-- Bubble sort
+- [Bubble sort](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/bubble-sort.md)
 - Selection sort
 - [Insertion sort](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/insertion-sort.md)
 - Merge sort
