@@ -1,5 +1,14 @@
 # Insertion sort
 
+Insertion Sort ou ordenação por inserção, é um algoritmo simples e eficiente quando aplicado a um pequeno número de elementos pouco desordenados.
+
+Em termos gerais, ele percorre um vetor de elementos da esquerda para a direita e à medida que avança vai deixando os elementos mais à esquerda ordenados.
+
+
+O algoritmo de inserção funciona da mesma maneira com que muitas pessoas ordenam cartas em um jogo de baralho como o pôquer.
+
+<img src="images/Insertion-sort-example.gif" alt="Insertion sort">
+
 ```c
 #include<stdio.h>
 

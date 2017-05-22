@@ -1,5 +1,9 @@
 # Bubble sort
 
+Bubble sort, ou ordenação por flutuação (literalmente "por bolha"), é um dos mais simples algoritmos de ordenação. A ideia é percorrer o vetor diversas vezes, a cada passagem fazendo flutuar para o topo o maior elemento da sequência. Essa movimentação lembra a forma como as bolhas em um tanque de água procuram seu próprio nível, e daí vem o nome do algoritmo.
+
+<img src="images/Bubble-sort-example-300px.gif" alt="Bubble sort">
+
 ```c
 #include <stdio.h>
 

@@ -1,5 +1,10 @@
 # Selection sort
 
+Selection sort, ou ordenação por seleção, é um algoritmo de ordenação que procura passar sempre o menor valor do vetor para a primeira posição (ou o maior dependendo da ordem requerida), depois o de segundo menor valor para a segunda posição, e assim
+é feito sucessivamente com os (n-1) elementos restantes, até os últimos dois elementos.
+
+<img src="images/Selection-Sort-Animation.gif" alt="Selection-Sort-Animation">
+
 ```c
 #include<stdio.h>
 
