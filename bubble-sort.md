@@ -6,44 +6,70 @@ Bubble sort, ou ordenação por flutuação (literalmente "por bolha"), é um do
 
 ```c
 #include <stdio.h>
+#include <stdbool.h>
 
-void bubble(int vetor[],int tamanho){
+void pesquisaBinaria(int vetor[], int tamanho){
 
-    // declaração de variaveis
-    int i,auxiliar,trocou,contador;
+    int contadorA,contadorB,aux,busca;
+    int inicial, ultimo, meio;
+    bool naoEncontrado;
 
-    contador = tamanho;
-
-    do {
-        tamanho--;
-        trocou = 0;
-
-        for(i=0; i<tamanho; i++){
-            
-            if(vetor[i] > vetor[i + 1]) {
-                auxiliar = vetor[i];
-                vetor[i] = vetor[i+1];
-                vetor[i+1] = auxiliar;
-                trocou = 1;
-            }            
-        
+    // ordena os valores do vetor
+    for(contadorA = 0; contadorA < 10; contadorA++){
+        for(contadorB = contadorA + 1; contadorB < 10; contadorB++){
+            if( vetor[contadorA] > vetor[contadorB] ){
+                aux = vetor[contadorB];
+                vetor[contadorB] = vetor[contadorA];
+                vetor[contadorA] = aux;
+            }
         }
-            
+    }
 
-    } while(trocou);
+    printf("Vetor ordenado. Preparado para busca binaria: ");
 
-    // exibe o vetor ordenado
-    printf("Vetor ordenado:\n");
+    // exibe na tela o vetor ordenado
+    for(contadorA = 0; contadorA < 10; contadorA++){
+        printf(" %d -", vetor[contadorA]);
+    }
 
-    for(i=0; i<contador; i++){
-        printf("%d ",vetor[i]);
+    printf("\n");
+
+    // pergunta ao usuário qual valor deseja pesquisar
+    printf("Qual o valor para busca? ");
+    scanf("%d",&busca);
+
+    inicial = 0;
+    ultimo = 9;
+    naoEncontrado = false;
+
+    // esse laço divide o vetor em duas partes e dependendo do valor a ser encontrado escolhe uma das partes
+    while( (inicial <= ultimo) && !(naoEncontrado) ){
+        meio = (inicial + ultimo) / 2;
+
+        if(vetor[meio] == busca){
+            naoEncontrado = true;
+        }
+
+        if(vetor[meio] > busca){
+            ultimo = meio - 1;
+        }else{
+            inicial = meio + 1;
+        }
+    }
+
+    if(naoEncontrado == true){
+        printf("Dado encontado na posicao %d! ", meio);
+    }else{
+        printf("Dado nao encontrado no vetor!");
     }
 }
 
 int main(){
 
     // declaração de variaveis
-    int tamanho,i,numero;
+    int tamanho,i;
+    int posicao = 0;
+
 
     // pergunta ao usuário o tamanho do vetor
     printf("Informe o tamanho do vetor: ");
@@ -54,17 +80,10 @@ int main(){
 
     // preenche o vetor com numeros aleatórios
     for(i=0; i<tamanho; i++){
-        vetor[i]=rand()%100;
+        vetor[i]=rand()%10;
     }
 
-     printf("Vetor desordenado:\n");
-
-    for(i=0; i<tamanho; i++){
-        printf("%d ",vetor[i]);
-    }
-
-    printf("\n");
-    bubble(vetor,tamanho);
+    pesquisaBinaria(vetor, tamanho);
 
     return 0;
 }
