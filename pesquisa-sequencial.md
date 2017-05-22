@@ -2,7 +2,7 @@
 
 Na Pesquisa sequencial, buscamos um valor dentro de um array comparnado-o com cada valor presente em cada posição, seguindo a sequência das posições do vetor, das primeira até a última.
 
-<img src="images/binary-and-linear-search-animations" alt="Pesquisa Sequencial">
+<img src="images/binary-and-linear-search-animations.gif" alt="Pesquisa Sequencial">
 
 ```c
 #include <stdio.h>
