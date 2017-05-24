@@ -11,5 +11,4 @@
 - [Bubble sort](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/bubble-sort.md)
 - [Selection sort](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/selection-sort.md)
 - [Insertion sort](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/insertion-sort.md)
-- Merge sort
-- Quick sort
+- [Quick sort](https://github.com/theandersonn/algoritmos-de-ordenacao-e-pesquisa/blob/master/quick-sort.md)
