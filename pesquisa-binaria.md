@@ -2,7 +2,27 @@
 
 A pesquisa binária é um algoritmo de busca em vetores que segue o paradigma de divisão e conquista. Ela parte do pressuposto de que o vetor está ordenado e realiza sucessivas divisões do espaço de busca comparando o elemento buscado (chave) com o elemento no meio do vetor. Se o elemento do meio do vetor for a chave, a busca termina com sucesso. Caso contrário, se o elemento do meio vier antes do elemento buscado, então a busca continua na metade posterior do vetor. E finalmente, se o elemento do meio vier depois da chave, a busca continua na metade anterior do vetor.
 
+- Destina-se a registros onde as chaves encontram-se ordenadas;
+- A busca não é iniciada no primeiro registro, e sim, no registro central da estrutura;
+- Para saber se uma chave está presente na estrutura, compare a chave com o registro que está na posição do meio da tabela.
+
 <img src="images/optimal-binary-search-tree-from-sorted-array.gif" alt="Pesquisa Binária">
+
+**Algoritmo**
+
+```c
+meio = (posicaoInicial + posicaoFinal) / 2;
+
+se(meio == numeroProcurado)
+    valor encontrado
+senão
+    se(numeroProcurado < meio)
+      posicaoFinal = meio -1
+    senão
+      posicaoInicial = meio +1    
+```
+
+**Algoritmo implementado em C**
 
 ```c
 #include <stdio.h>
