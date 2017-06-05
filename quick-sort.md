@@ -1,5 +1,11 @@
 # Quick Sort
 
+- Método de ordenação muito utilizado, devido a sua rapidez e eficiência;
+- É um algoritmo de ordenação não-eswtável (isto é, dados iguais podem ficar fora da ordem original de entrada);
+- Consiste em um método baseado na estratégia de dividir para conquistar;
+- Uma estrutura organizada pelo Quick Sort terá duas chaves rearranjadas de modo que as chaves menores precedam as chaves maiores;
+- É um dos métodos mais utilizados até hoje.
+
 ```c
 #include<stdio.h>
 
