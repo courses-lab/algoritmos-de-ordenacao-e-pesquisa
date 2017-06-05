@@ -13,7 +13,7 @@ A pesquisa binária é um algoritmo de busca em vetores que segue o paradigma de
 ```c
 meio = (posicaoInicial + posicaoFinal) / 2;
 
-se(meio == numeroProcurado)
+se(numeroProcurado == meio)
     valor encontrado
 senão
     se(numeroProcurado < meio)
@@ -45,12 +45,12 @@ int main(){
 
     // preenche o vetor com numeros aleatórios
     for(i=0; i<tamanho; i++){
-        vetor[i]=rand()%10;
+        vetor[i]=rand()%100;
     }
 
     // ordena os valores do vetor
-    for(contadorA = 0; contadorA < 10; contadorA++){
-        for(contadorB = contadorA + 1; contadorB < 10; contadorB++){
+    for(contadorA = 0; contadorA < tamanho; contadorA++){
+        for(contadorB = contadorA + 1; contadorB < tamanho; contadorB++){
             if( vetor[contadorA] > vetor[contadorB] ){
                 aux = vetor[contadorB];
                 vetor[contadorB] = vetor[contadorA];
@@ -58,15 +58,6 @@ int main(){
             }
         }
     }
-
-    printf("Vetor ordenado. Preparado para busca binaria: ");
-
-    // exibe na tela o vetor ordenado
-    for(contadorA = 0; contadorA < 10; contadorA++){
-        printf(" %d -", vetor[contadorA]);
-    }
-
-    printf("\n");
 
     // pergunta ao usuário qual valor deseja pesquisar
     printf("Qual o valor para busca? ");
@@ -80,21 +71,27 @@ int main(){
     while( (inicial <= ultimo) && !(naoEncontrado) ){
         meio = (inicial + ultimo) / 2;
 
-        if(vetor[meio] == busca){
+        if(busca == vetor[meio]){
             naoEncontrado = true;
         }
 
-        if(vetor[meio] > busca){
+        if(busca < vetor[meio]){
             ultimo = meio - 1;
         }else{
             inicial = meio + 1;
         }
     }
 
+     printf("\nVetor ordenado\n");
+    // exibe na tela o vetor ordenado
+    for(contadorA = 0; contadorA < tamanho; contadorA++){
+        printf(" %d -", vetor[contadorA]);
+    }
+
     if(naoEncontrado == true){
-        printf("Dado encontado na posicao %d! ", meio);
+        printf("\nDado encontado na posicao %d! ", meio);
     }else{
-        printf("Dado nao encontrado no vetor!");
+        printf("\nDado nao encontrado no vetor!");
     }
      return 0;
 }
